@@ -39,7 +39,9 @@ list.addEventListener('click', e => {
 });
 
 const filterTodos = () => {
-  console.log(Array.from(list.children));
+  Array.from(list.children)
+    .filter((todo) => !todo.textContent.includes(term))
+    .forEach(() => todo.classList.add('filtered'));
 };
 
 // keyup event
