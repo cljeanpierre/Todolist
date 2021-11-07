@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
+const search = document.querySelector('.search input');
 
 const generateTemplate = todo => {
   const html = `
@@ -26,3 +27,16 @@ addForm.addEventListener('submit', e => {
   }
 
 });
+
+
+//delete todos
+
+list.addEventListener('click', e => {
+
+  if(e.target.classList.contains('delete')){
+    e.target.parentElement.remove();
+  }
+});
+
+// keyup event
+
